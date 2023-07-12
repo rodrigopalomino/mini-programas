@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.calculadora-input {
+    border: 1px solid black;
+}
+
+.calculadora-input input{
+    width: 200px;
+    height: 40px;
+}
+
+.calculadora-button {
+    border: 1px solid black;
+}
+
+.calculadora-button {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    margin-top: 20px;
+}
+
+.calculadora-button button {
+    width: 50px;
+    height: 50px;
+}
