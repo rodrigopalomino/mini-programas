@@ -26,10 +26,12 @@ body {
 
 .c-negro {
     background: rgb(28, 26, 28);
+    transition: 0.5s ease;
 }
 
 .c-blanco {
     background: white;
+    transition: 0.5s ease;
 }
 
 #input{
@@ -47,11 +49,13 @@ body {
 .input-negro {
     background: rgb(28, 26, 28);
     color: white;
+    transition: 0.5s ease;
 }
 
 .input-blanco {
     background: white;
     color: black;
+    transition: 0.5s ease;
 }
 
 
@@ -113,7 +117,17 @@ body {
     border-radius: 50%;
 }
 
-#cambio-negro {
+#cambio:hover {
+    transform: scale(1.2);
+}
+
+.cambio-negro {
     background: black;
+    transition: 0.5s ease;
+}
+
+.cambio-blanco {
+    background: white;
+    transition: 0.5s ease;
 }
 

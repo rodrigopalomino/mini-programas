@@ -17,14 +17,23 @@ cambio.addEventListener('click', () => {
     if ( negro ){
         calculadora.classList.remove('c-negro')
         calculadora.classList.add('c-blanco')
+
         input.classList.remove('input-negro')
-        input.classList.add('c-blanco')
+        input.classList.add('input-blanco')
+
+        cambio.classList.add('cambio-negro')
+        cambio.classList.remove('cambio-blanco')
+
         negro = false
     }else {
         calculadora.classList.add('c-negro')
         calculadora.classList.remove('c-blanco')
         input.classList.add('input-negro')
-        input.classList.remove('c-blanco')
+        input.classList.remove('input-blanco')
+
+        cambio.classList.remove('cambio-negro')
+        cambio.classList.add('cambio-blanco')
+
         negro = true
     }
 
@@ -37,10 +46,7 @@ cambio.addEventListener('click', () => {
 
 botones.forEach( (boton) =>{
     boton.addEventListener('click', (e) => {
-        // console.log("boton : ",e.target.value)
-        // console.log("")
-        // console.log("valorinput : ",valorInput)
-        // console.log("valor1 : ",valor1)
+
         
         if ( !isNaN(e.target.value) ){
             valorInput = valorInput + e.target.value
@@ -50,37 +56,43 @@ botones.forEach( (boton) =>{
         
 
         switch(e.target.value) {
+            case "punto":
+                if (!valorInput.includes('.')) {
+                    valorInput = valorInput + '.';
+                    input.value = valorInput;
+                    }
+                break
             case "reset":
                 input.value = ""
                 valor1 = 0
                 valorInput = ""
                 break
             case "+":
-                valor1 = parseInt(valorInput)
+                valor1 = parseFloat(valorInput)
                 input.value = ""
                 valorInput = ""
                 operacion = operaciones[0]
                 break
             case "-":
-                valor1 = parseInt(valorInput)
+                valor1 = parseFloat(valorInput)
                 input.value = ""
                 valorInput = ""
                 operacion = operaciones[1]
                 break
                 case "*":
-                    valor1 = parseInt(valorInput)
+                    valor1 = parseFloat(valorInput)
                     input.value = ""
                     valorInput = ""
                     operacion = operaciones[2]
                     break
                 case "/":
-                    valor1 = parseInt(valorInput)
+                    valor1 = parseFloat(valorInput)
                     input.value = ""
                     valorInput = ""
                     operacion = operaciones[3]
                     break
             case "igual":
-                let resultado =  eval(valor1 + operacion + parseInt(valorInput))
+                let resultado =  eval(valor1 + operacion + parseFloat(valorInput))
                 valorInput = resultado
                 input.value = resultado
         }
