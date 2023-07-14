@@ -98,3 +98,11 @@ body {
     color: var(--clr);
     transform: translateX(10px);
 }
+
+.sidebar__inferior-grupo-activo-c i {
+    transition: transform 1s ease;
+    background: var(--clr);
+    transform: translateX(20px);
+    box-shadow: 0 0 10px var(--clr);
+    color: white;
+}
