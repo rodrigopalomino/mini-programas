@@ -11,37 +11,44 @@
     
     <div class="conteiner">
 
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
 
-            <div class="sidebar-barra">
-                <i class="fa-solid fa-bars"></i>
+            <div class="sidebar__superior" id="sidebar__superior">
+                <i id="icono-bar" class="sidebar__superior-icono fa-solid fa-x"></i>
             </div>
-    
-            <div class="sidebar-iconos">
 
-                <div class="icono" id ="casa">
-                    <i class="fa-solid fa-house" id="casa"></i>
+            <div class="sidebar__inferior">
+
+                <div id="sidebar__inferior-grupo-house" class="sidebar__inferior-grupo">
+                    <i style="--clr:#fe5433" id="icono-house" class="sidebar__inferior-grupo-icono fa-solid fa-house"></i>
+                    <span style="--clr:#fe5433" class="sidebar__inferior-grupo-span">House</span>
                 </div>
-                <div class="icono" id="user">
-                    <i class="fa-regular fa-user" id="user"></i>
+
+                <div id="sidebar__inferior-grupo-about" class="sidebar__inferior-grupo">
+                    <i style="--clr:#fea110" id="icono-about" class="sidebar__inferior-grupo-icono fa-regular fa-user"></i>
+                    <span style="--clr:#fea110" class="sidebar__inferior-grupo-span">About</span>
                 </div>
-                <div class="icono">
-                    <i class="fa-solid fa-cloud" id="nube"></i>
+
+                <div id="sidebar__inferior-grupo-messages" class="sidebar__inferior-grupo">
+                    <i style="--clr:#23b52a" id="icono-messages" class="sidebar__inferior-grupo-icono fa-regular fa-comment"></i>
+                    <span style="--clr:#23b52a" class="sidebar__inferior-grupo-span">Messages</span>
                 </div>
-                <div class="icono">
-                    <i class="fa-solid fa-camera" id="camara"></i>
+
+                <div id="sidebar__inferior-grupo-photos" class="sidebar__inferior-grupo">
+                    <i style="--clr:#138efc" id="icono-photos" class="sidebar__inferior-grupo-icono fa-solid fa-camera"></i>
+                    <span style="--clr:#138efc" class="sidebar__inferior-grupo-span">Photos</span>
                 </div>
-                <div class="icono">
-                    <i class="fa-solid fa-gear" id="engranaje"></i>
+
+                <div id="sidebar__inferior-grupo-settings" class="sidebar__inferior-grupo">
+                    <i style="--clr:#a851d9" id="icono-settings" class="sidebar__inferior-grupo-icono fa-solid fa-gear"></i>
+                    <span style="--clr:#a851d9" class="sidebar__inferior-grupo-span">Settings</span>
                 </div>
 
             </div>
 
         </div>
-        
 
     </div>
-
-</body>
     <script src="index.js"></script>
+</body>
 </html>

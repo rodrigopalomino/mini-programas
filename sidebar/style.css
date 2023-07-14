@@ -5,68 +5,96 @@
 }
 
 body {
-    background: rgb(62, 66, 84);
+    background: #3e4254;
 }
 
 .conteiner {
     border: 1px solid black;
-    display: flex;
-    flex-direction: column;
     height: 80vh;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* sidebar */
 .sidebar {
     background: white;
-    border-radius: 15px;
-    height: 50vh;
-    width: 70px;
-}
-
-/*barra*/
-.sidebar-barra {
-    display: flex;    
-    justify-content: center;
-    align-items: center;
-    height: 14%;
-    border-bottom: 1px solid black;
-}
-
-
-/*iconos*/
-.sidebar-iconos {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 86%;
-
-}
-
-.icono {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+    height: 55%;
+    width: 170px;
+    border-radius: 10px;
     transition: 1s ease;
 }
 
-.icono-activo {
-    transform: translateX(40px);
-    background: rgb(255,83,56);
+.sidebar-activo{
+    width: 60px;
+    /* overflow: hidden; */
+}
+
+/* sidebar superior */
+.sidebar__superior {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 11%;
+    border-bottom: 0.5px solid black;
+}
+
+.sidebar__superior-icono {
+    font-size: 20px;
+    margin-left: 20px;
+    /* border: 1px solid black; */
+    /* transition: 1s ease; */
+}
+
+
+/* sidebar inferrio*/
+.sidebar__inferior {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 89%;
+}
+
+.sidebar__inferior-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    height: 60px;
+    position: relative;
+}
+
+.sidebar__inferior-grupo i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    /* border: 1px solid black; */
+    margin-left: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.sidebar__inferior-grupo span {
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    transition: 1s ease;
+}
+
+/* sidebar inferior grupo activo con letras */
+
+.sidebar__inferior-grupo-activo i {
+    transition: transform 1s ease;
+    background: var(--clr);
+    transform: translateX(10px);
+    box-shadow: 0 0 10px var(--clr);
     color: white;
-    border-radius: 10px;
 }
-
-.sidebar-iconos i {
-    font-size: 25px;
-    margin: 15px 0;
-
+.sidebar__inferior-grupo-activo span {
+    transition: transform 1s ease;
+    color: var(--clr);
+    transform: translateX(10px);
 }
-
-
