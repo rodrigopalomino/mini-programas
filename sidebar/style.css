@@ -37,14 +37,20 @@ body {
     align-items: center;
     height: 11%;
     border-bottom: 0.5px solid black;
+    /* border: 1px solid black; */
 }
 
-.sidebar__superior-icono {
-    font-size: 20px;
-    margin-left: 20px;
-    /* border: 1px solid black; */
-    /* transition: 1s ease; */
+.sidebar__superior button {
+    margin-left: 17px;
+    border: none;
+    background: white;
 }
+
+.sidebar__superior button svg {
+    overflow: visible;
+
+}
+
 
 
 /* sidebar inferrio*/
@@ -105,4 +111,100 @@ body {
     transform: translateX(20px);
     box-shadow: 0 0 10px var(--clr);
     color: white;
+}
+
+/* animaciones */
+
+#cuadro.open #top-line{
+    animation: animation-top-line 1s forwards ;
+    transform-origin: top left;
+}
+
+#cuadro.open #bottom-line{
+    animation: animation-bottom-line 1s forwards ;
+    transform-origin: bottom left;
+}
+
+#cuadro.open #middle-line{
+    animation: animation-middle-line 1s forwards ;
+    transform-origin: center;
+}
+
+#cuadro #top-line{
+    animation: animation-top-line-close 1s forwards ;
+    transform-origin: top left;
+}
+
+#cuadro #bottom-line{
+    animation: animation-bottom-line-close 1s forwards ;
+    transform-origin: bottom left;
+}
+
+#cuadro #middle-line{
+    animation: animation-middle-line-close 1s forwards ;
+    transform-origin: center;
+}
+
+
+@keyframes animation-top-line {
+    50%,100%{
+        transform: translate(5px, 0px) rotate(45deg);
+
+    }
+
+}
+
+@keyframes animation-bottom-line {
+    50%,100%{
+        transform: translate(5px, -1px) rotate(-45deg);
+    }
+}
+
+
+@keyframes animation-middle-line {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0.5);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+
+@keyframes animation-top-line-close {
+    0%{
+        transform: translate(5px, 0px) rotate(45deg);
+    }
+
+    100%{
+        transform: translate(0, 0) rotate(-0deg);
+    }
+
+}
+
+@keyframes animation-bottom-line-close {
+    0%{
+        transform: translate(5px, -1px) rotate(-45deg);
+    }
+
+    100%{
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+}
+
+
+@keyframes animation-middle-line-close {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(0.5);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }

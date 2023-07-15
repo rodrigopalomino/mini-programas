@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ho</h1>
+
+    <button id="cuadro">
+        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="hamburger">
+            <rect id="bottom-line" y="18.2651" width="25" height="1.73491" rx="0.867454" fill="#0D0D0D"/>
+            <rect id="middle-line" y="9.13255" width="25" height="1.73491" rx="0.867454" fill="#0D0D0D"/>
+            <rect id="top-line" width="25" height="1.9431" rx="0.971548" fill="#0D0D0D"/>
+            </g>
+            </svg>
+            
+    </button>
+        
+    <script>
+
+        const hamburger = document.getElementById('cuadro')
+        // console.log("c: ",hamburger)
+        hamburger.addEventListener('click', (e) => {
+            
+            hamburger.classList.toggle('open')
+        })
+
+    </script>
+
+        
+</body>
+</html>

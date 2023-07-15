@@ -1,7 +1,7 @@
 const iconos = document.querySelectorAll('.sidebar__inferior-grupo i')
-const bar = document.getElementById('icono-bar')
+const bar = document.querySelector('.sidebar__superior button')
 const spans = document.querySelectorAll('.sidebar__inferior-grupo-span')
-console.log("botones : ",spans)
+console.log("botones : ",bar)
 
 var c = true
 const controladores = {
@@ -21,8 +21,9 @@ bar.addEventListener('click', (e) => {
         spans.forEach(span => {
             span.style.opacity = 0
         })
-        e.target.classList.remove('fa-x')
-        e.target.classList.add('fa-bars')
+
+        bar.classList.toggle('open')
+
         document.getElementById('sidebar').classList.add('sidebar-activo')
         c = false
 
@@ -53,8 +54,7 @@ bar.addEventListener('click', (e) => {
         spans.forEach(span => {
             span.style.opacity = 1
         })
-        e.target.classList.add('fa-x')
-        e.target.classList.remove('fa-bars')
+        bar.classList.toggle('open')
         document.getElementById('sidebar').classList.remove('sidebar-activo')
         c = true
 
