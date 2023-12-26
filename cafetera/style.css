@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 300px;
+  height: 280px;
+  position: absolute;
+  top: calc(50% - 140px);
+  left: calc(50% - 150px);
+}
+
+.coffe-top {
+  inline-size: 100%;
+  block-size: 80px;
+  border-radius: 10px;
+  background: #ddcfcc;
+  position: relative;
+}
+
+.coffe-top__buttons {
+  width: 25px;
+  height: 25px;
+  background: #282323;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+}
+
+.coffe-top__button-one {
+  left: 15px;
+}
+.coffe-top__button-two {
+  left: 50px;
+}
+
+.coffe-top__buttons::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #615e5e;
+  position: absolute;
+  bottom: -8px;
+  left: calc(50% - 4px);
+}
+
+.coffe-top__display {
+  background: #9acfc5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #43beae;
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+}
+
+.coffe-top__details {
+  width: 8px;
+  height: 20px;
+  background: #9b9091;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  box-shadow: -12px 0 0 #9b9091, -24px 0 0 #9b9091;
+}
+
+.coffe-medium {
+  background: #bcb0af;
+  width: 90%;
+  height: 160px;
+  position: absolute;
+  left: calc(50% - 45%);
+}
+
+.coffe-medium:before {
+  content: "";
+  width: 90%;
+  height: 100px;
+  background: #776f6e;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 45%);
+  border-radius: 20px 20px 0 0;
+}
+
+.coffe-medium__exit {
+  width: 60px;
+  height: 20px;
+  background: #231f20;
+  position: absolute;
+  left: calc(50% - 30px);
+}
+
+.coffe-medium__exit::before {
+  content: "";
+  width: 50px;
+  height: 20px;
+  background: #231f20;
+  position: absolute;
+  left: calc(50% - 25px);
+  top: 20px;
+  border-radius: 0 0 50% 50%;
+}
+
+.coffe-medium__exit::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #231f20;
+  position: absolute;
+  left: calc(50% - 5px);
+  top: 40px;
+}
+
+.coffe-medium__arm {
+  width: 70px;
+  height: 20px;
+  background: #231f20;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.coffe-medium__arm::before {
+  content: "";
+  width: 15px;
+  height: 5px;
+  background: #9e9495;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+}
+
+.coffe-medium__cup {
+  width: 80px;
+  height: 48px;
+  background: white;
+  border-radius: 0 0 70px 70px / 0 0 110px 110px;
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 40px);
+}
+
+.coffe-medium__cup::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  right: -13px;
+}
+
+.coffe-medium__liquid {
+  width: 6px;
+  height: 63px;
+  background: #74372b;
+  position: absolute;
+  left: calc(50% - 3px);
+  top: 50px;
+  animation: liquid 4s 4s linear infinite;
+}
+
+.coffe-medium__smoke {
+  width: 8px;
+  height: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #b3aeae;
+}
+
+.coffe-medium__smoke-one {
+  opacity: 0;
+  bottom: 50px;
+  left: 102px;
+  animation: smokeOne 3s 4s linear infinite;
+}
+
+.coffe-medium__smoke-two {
+  opacity: 0;
+  bottom: 70px;
+  left: 118px;
+  animation: smokeTwo 3s 5s linear infinite;
+}
+
+.coffe-medium__smoke-three {
+  opacity: 0;
+  bottom: 65px;
+  right: 118px;
+  animation: smokeOne 3s 6s linear infinite;
+}
+
+.coffe-medium__smoke-for {
+  opacity: 0;
+  bottom: 50px;
+  right: 102px;
+  animation: smokeTwo 3s 5s linear infinite;
+}
+/*footer*/
+
+.coffe-footer {
+  width: 95%;
+  height: 15px;
+  background: #41bdad;
+  position: absolute;
+  bottom: 25px;
+  left: 8px;
+  border-radius: 10px;
+}
+
+.coffe-footer::after {
+  content: "";
+  width: 106%;
+  height: 26px;
+  background: black;
+  position: absolute;
+  bottom: -25px;
+  left: -8px;
+}
+
+/*Animaciones*/
+@keyframes liquid {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+  20% {
+    height: 62px;
+    opacity: 1;
+  }
+  95% {
+    height: 62px;
+    opacity: 1;
+  }
+  100% {
+    height: 62px;
+    opacity: 0;
+  }
+}
+
+@keyframes smokeOne {
+  0% {
+    bottom: 20px;
+    opacity: 0;
+  }
+  40% {
+    bottom: 50px;
+    opacity: 0.5;
+  }
+  80% {
+    bottom: 80px;
+    opacity: 0.3;
+  }
+  100% {
+    bottom: 80px;
+    opacity: 0;
+  }
+}
+
+@keyframes smokeTwo {
+  0% {
+    bottom: 40px;
+    opacity: 0;
+  }
+  40% {
+    bottom: 70px;
+    opacity: 0.5;
+  }
+  80% {
+    bottom: 80px;
+    opacity: 0.3;
+  }
+  100% {
+    bottom: 80px;
+    opacity: 0;
+  }
+}
