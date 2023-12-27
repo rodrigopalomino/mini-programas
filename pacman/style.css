@@ -38,7 +38,7 @@ body {
 
 .pacman::after {
   content: "";
-  border: 3rem solid yellow;
+  border: 3rem solid red;
   border-radius: 50%;
   border-right-color: transparent;
   position: absolute;
